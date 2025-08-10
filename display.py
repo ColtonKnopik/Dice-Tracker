@@ -1,4 +1,9 @@
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+    HAS_MATPLOTLIB = True
+except ImportError:
+    HAS_MATPLOTLIB = False
+
 
 def print_counts(results):
     for i, count in enumerate(results, start=1):
@@ -14,6 +19,10 @@ def print_percentages(results):
             print(f"{i}: 0.00%")
 
 def get_percentage_graph(results):
+    if not HAS_MATPLOTLIB:
+        print("Matplotlib is not installed. Graphing is disabled.")
+        return
+
     total_rolls = sum(results)
     if total_rolls == 0:
         print("No rolls to graph.")
@@ -32,6 +41,10 @@ def get_percentage_graph(results):
 import numpy as np
 
 def get_radar_chart(results):
+    if not HAS_MATPLOTLIB:
+    print("Matplotlib is not installed. Graphing is disabled.")
+    return
+
     total_rolls = sum(results)
     if total_rolls == 0:
         print("No rolls to graph.")
