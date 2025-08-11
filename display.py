@@ -42,8 +42,8 @@ import numpy as np
 
 def get_radar_chart(results):
     if not HAS_MATPLOTLIB:
-    print("Matplotlib is not installed. Graphing is disabled.")
-    return
+        print("Matplotlib is not installed. Graphing is disabled.")
+        return
 
     total_rolls = sum(results)
     if total_rolls == 0:
@@ -81,3 +81,4 @@ def display_help():
     print("results -r              Show radar chart of results")
     print("exit                    Exit the program")
     print("------------------------------------")
+
