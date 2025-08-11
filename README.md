@@ -9,7 +9,8 @@ Tracks dice rolls and formats data
 # Installs
 * Install latest python version here: [Python 3.12.3](https://www.python.org/downloads/release/python-3123/)
 * Open terminal
-* Enter: `pip install matplotlib`
+* Enter: `pip install numpy`
+* Enter: `pip install matplotlib` (Optional for Graphing)
 
 # Usage
 
